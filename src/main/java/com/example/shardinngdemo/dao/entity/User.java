@@ -8,11 +8,13 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
 
 @Data
-@TableName("user2")
-public class User2 {
+@TableName("tb_user")
+public class User {
 
     @TableId(type = IdType.ASSIGN_ID)
     private Long id;
+
+    private String username;
 
     private String password;
 
