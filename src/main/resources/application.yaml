@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: ShardinngDemo
+  datasource:
+    driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
+    url: jdbc:shardingsphere:classpath:shardingsphere-config-dev.yaml
+
+
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/db_snowid_demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#    username: root
+#    password: 2640
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  shardingsphere:
+#    datasource:
+#      names: master
+#      master:
+#        type: com.zaxxer.hikari.HikariDataSource
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        jdbc-url: jdbc:mysql://localhost:3306/db_snowid_demo
+#        username: root
+#        password: 2640
+#    rules:
+#      encrypt:
+#        encryptors:
+#          aes_encryptor:
+#            type: AES
+#            props:
+#              aes-key-value: 123456abcdefghij # AES ????????
+#        tables:
+#          user2:
+#            columns:
+#              password: # ????
+#                cipherColumn: password_cipher # ????
+#                encryptorName: aes_encryptor
+#    props:
+#      sql-show: true # ?? SQL ??
+
+server:
+  port: 8877
+
